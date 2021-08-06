@@ -68,10 +68,29 @@ public class Scene1Controller implements Initializable {
     @FXML
     public void calculate(ActionEvent event) throws Exception {
 
+
         name = inputName.getText();
-        age = Integer.parseInt(inputAge.getText());
-        height = Double.parseDouble(inputHeight.getText());
-        weight = Double.parseDouble(inputWeight.getText());
+
+            try {
+                age = Integer.parseInt(inputAge.getText());
+            }
+            catch (NumberFormatException e){
+                inputAge.setText("Please insert a number");
+            }
+
+            try {
+                height = Double.parseDouble(inputHeight.getText());
+            }
+            catch (NumberFormatException e){
+                inputHeight.setText("Please insert a number");
+            }
+            try{
+                weight = Double.parseDouble(inputWeight.getText());
+            }
+            catch (NumberFormatException e){
+                inputWeight.setText("Please insert a number");
+            }
+
         String chosenGender = getGender(event);
 
         BMI = weight / ((height / 100) * (height / 100));
