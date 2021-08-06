@@ -74,6 +74,6 @@
          </children>
       </VBox>
       <Button fx:id="calculateButton" layoutX="14.0" layoutY="318.0" mnemonicParsing="false" onAction="#calculateDeficit" text="Calculate Calorie Deficit" />
-      <Label fx:id="comment" layoutX="81.0" layoutY="510.0" prefHeight="17.0" prefWidth="258.0" text="Label" />
+      <Label fx:id="comment" layoutX="81.0" layoutY="510.0" prefHeight="17.0" prefWidth="258.0" text="Your  progress" />
    </children>
 </AnchorPane>
